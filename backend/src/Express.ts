@@ -18,7 +18,7 @@ class Express {
          * Express 로 웹링크로 GraphQL 경로를 생성합니다.
          */
         GraphQL.applyMiddleware({
-            path: "/graphql",
+            path: "/graphql", /* GraphQL 웹경로 */
             app: this.express
         })
 
