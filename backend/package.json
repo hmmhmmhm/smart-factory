@@ -15,6 +15,7 @@
     "@types/express": "^4.16.1",
     "express": "^4.16.4",
     "folder-logger": "^1.0.4",
+    "level-hyper": "^2.0.0",
     "stably": "^1.0.1",
     "ts-node": "^8.0.3",
     "typescript": "^3.3.4000"
