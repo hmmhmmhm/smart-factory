@@ -27,12 +27,14 @@ const port: number = Number(process.env.PORT) || 3000
  * Express 인스턴스 생성
  */
 import * as express from "express"
-import App from "./App"
-const app: express.Application = App.getInstance().express
+import Express from "./Express"
+const app: express.Application = Express.getInstance().express
 
 /**
  * @description
  * Express 인스턴스 서버 포트개방
  */
-app.listen(port, () => Logger.debug(`🚧  서버 인스턴스가 ${port} 포트로 웹앱 송수신을 시작했습니다.`))
-    .on("error", (err) => Logger.error(`🔥  ${String(err)}`))
+app.listen(port, () => {
+    Logger.debug(`🚧  서버 인스턴스가 ${port} 포트로 웹앱 송수신을 시작했습니다.`)
+    Logger.debug(`🚧  웹앱 내부 접근 경로 http://127.0.0.1:${port}`)
+}).on("error", (err) => Logger.error(`🔥  ${String(err)}`))
