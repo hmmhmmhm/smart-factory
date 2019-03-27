@@ -1,13 +1,21 @@
 {
-    "extends": "tslint-config-standard",
-    "rules": {
-        "indent": [true, "spaces", 4],
-        "ter-indent": [
-            true,
-            4,
-            {
-              "SwitchCase": 1
-            }
-          ]
-    }
+  "defaultSeverity": "error",
+  "extends": [
+      "tslint:recommended",
+      "tslint-react"
+  ],
+  "jsRules": {},
+  "rules": {
+      "no-console": false,
+      "semicolon": [true, "never"],
+      "no-unused-vars": ["warn"],
+      "no-multi-spaces": false,
+      "ter-indent": [ true, 4],
+      "indent": [true, "spaces", 4],
+      "jsx-wrap-multiline": false,
+      "jsx-equals-spacing": [true, "always"]
+  },
+  "rulesDirectory": [
+      "node_modules/tslint-eslint-rules/dist/rules"
+  ]
 }
